@@ -1,9 +1,12 @@
 import React from 'react'
+import Login from './pages/Login/Login'
+import Footer from './components/static/Footer'
 
 const App = () => {
   return (
     <div>
-      This is reality!
+      <Login />
+      <Footer />
     </div>
   )
 }

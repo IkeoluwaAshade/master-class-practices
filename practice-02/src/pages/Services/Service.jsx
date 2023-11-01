@@ -13,7 +13,7 @@ const Seervice = () => {
 
             <p>
                 With a few taps on your <br />
-                smartphone, you can securely <br /> and efficientlt trade a variety of diital assets.
+                smartphone, you can securely <br /> and efficiently trade a variety of digital assets.
                 <br />
                 <br />
                 <br />

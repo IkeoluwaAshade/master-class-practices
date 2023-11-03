@@ -7,7 +7,7 @@ const Login = () => {
         <Wrapper>
             <Logo></Logo>
 
-            <h1>MTN Mobile Wifi MF910</h1>
+            Login
         </Wrapper>
     </Container>
   )
@@ -16,7 +16,7 @@ const Login = () => {
 export default Login
 
 const Container = styled.div`
-    background-color: gold;
+    background-color: goldenrod;
     height: 100vh;
     
 `

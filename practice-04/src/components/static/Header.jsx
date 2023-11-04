@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from "styled-components"
 import { BsToggle2On } from 'react-icons/bs'
 import { BsToggle2Off } from 'react-icons/bs'
 
 const Header = () => {
+
+    const [toggle, setToggle] = useState (false)
+
+    const toggleChange = () => {setToggle(!toggle)}
+
   return (
+
     <Container>
         <Wrapper>
             <Logo>
@@ -12,8 +18,20 @@ const Header = () => {
                 <small>Tootal Follower 23,004</small>
             </Logo>
 
-            <Toggle>
-            <span>dark mode</span><Icon><BsToggle2Off  /></Icon>
+            
+            <Toggle onClick={toggleChange}>
+            <span>dark mode</span>
+                {toggle ? (
+                    /* Dark mode */
+                    <BsToggle2On size={25} />  
+
+                ) : (
+                    /* Light mode */
+                    <BsToggle2Off size={25} />
+
+                
+                )}
+            
             
             </Toggle>
         </Wrapper>
@@ -40,6 +58,11 @@ width: 85%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+span {
+    /* font-size: 25px; */
+    margin-right: 20px;
+}
 `
 
 const Logo = styled.div `
@@ -58,7 +81,3 @@ const Toggle = styled.div`
     display: flex;
 `
 
-const Icon = styled.div`
-font-size: 25px;
-margin-left: 10px;
-`

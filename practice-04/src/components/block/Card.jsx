@@ -1,33 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
-import Facebook from '../../assets/icon-facebook.svg'
-import Instagram from '../../assets/icon-instagram.svg'
-import facebook from '../../assets/icon-twitter.svg'
+import Dropicon from '../../assets/icon-down.svg'
 
-const Card = () => {
+
+const Card = ({ userName, totalFollowers, myIcon, Followers }) => {
   return (
     <CardBox>
-        <SecondComp>
-            <Icon>< img src={Facebook} alt='Facebook Icon'/></Icon>
-            <span>@nathanf</span>
-        </SecondComp>
+        <UpperCardBox>
+            <SecondComp>
+                <Icon>{myIcon}</Icon>
+                <span>{userName}</span>
+            </SecondComp>
 
-        <ThirdComp>
-            <span>1987</span>
-            <small>Followers</small>
-        </ThirdComp>
+            <ThirdComp>
+                <span>{totalFollowers}</span>
+                <small>{Followers}</small>
+            </ThirdComp>
 
-        <FourthComp>
-            <DropIcon>Drop</DropIcon>
-            <span>12 Today</span>
-        </FourthComp>
+            <FourthComp>
+                <DropIcon></DropIcon>
+                <span><img src={Dropicon} alt='Drop Icon' />12 Today</span>
+            </FourthComp>
+        </UpperCardBox>
     </CardBox>
+
+    
   )
 }
 
 export default Card
 
-const CardBox = styled.div`
+const CardBox = styled.div``
+
+const UpperCardBox = styled.div`
    background-color: #f0f3fa;
    width: 300px;
    height: 300px;
